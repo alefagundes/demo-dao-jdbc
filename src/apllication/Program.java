@@ -3,8 +3,8 @@ package apllication;
 
 
 import java.util.Date;
-import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.DaoFactoty;
 import model.dao.SellerDao;
@@ -14,7 +14,7 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-		
+		Scanner sc = new Scanner(System.in);
 		
 		SellerDao sellerDao = DaoFactoty.createSellerDao();
 		
@@ -48,5 +48,13 @@ public class Program {
 		seller.setName("Martha waine");
 		sellerDao.update(seller);
 		System.out.println("Update completed!");
+		
+		System.out.println("\n=== Test 6: seller update =====");
+		System.out.print("\nInform Id to delete seller:");
+		int id = sc.nextInt();
+		sellerDao.deleteById(id);
+		System.out.println("Delete completed!");
+		sc.close();
 	}
+	
 }
