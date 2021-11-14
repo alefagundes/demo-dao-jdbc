@@ -24,7 +24,7 @@ public class Program {
 	
 		System.out.println(seller);
 		
-		System.out.println("\n=== Test 2: seller findDyId =====");
+		System.out.println("\n=== Test 2: seller findDyDepartment =====");
 		
 		Department department = new Department(2, null);
 		
